@@ -46,6 +46,9 @@ bot.on("message", message => {
   case "!baok":
     baok();
     break;
+  case "!tompan":
+    tompan();
+    break;
   default:
     // code block
 }
@@ -75,7 +78,7 @@ bot.on("message", message => {
     ];
 
     var citater = citat[Math.floor(Math.random()*citat.length)];
-    message.channel.send(citater);
+    message.channel.send(citater+quote);
   }
 
   function memes() {
@@ -111,7 +114,7 @@ bot.on("message", message => {
   function zod() {
     let number = 8;
     let imageNumber = Math.floor (Math.random() * (number - 1 + 1)) +1;
-    message.channel.send( {files: ["./peoplePics/zod/zod (" + imageNumber + ").png"]}).then(d_msg => { if(imageNumber == 1 || imageNumber == 5){d_msg.delete(2000);}else if (imageNumber == 8){d_msg.delete(10000);}});
+    message.channel.send( {files: ["./peoplePics/zod/zod (" + imageNumber + ").png"]}).then(d_msg => { if(imageNumber == 1 || imageNumber == 5){d_msg.delete(4000);}else if (imageNumber == 8){d_msg.delete(10000);}});
   }
 
   function frasse() {
@@ -123,7 +126,13 @@ bot.on("message", message => {
   function baok() {
     let number = 15;
     let imageNumber = Math.floor (Math.random() * (number - 1 + 1)) +1;
-    message.channel.send( {files: ["./peoplePics/baok/baok (" + imageNumber + ").png"]});
+    message.channel.send( {files: ["./peoplePics/baok/baok (" + imageNumber + ").png"]}).then(d_msg => { if(imageNumber == 14 || imageNumber == 2 || imageNumber == 1){d_msg.delete(4000);}});
+  }
+
+  function tompan() {
+    let number = 15;
+    let imageNumber = Math.floor (Math.random() * (number - 1 + 1)) +1;
+    message.channel.send( {files: ["./peoplePics/tompan/tompan (" + imageNumber + ").png"]});
   }
 
   function wait(ms) {
