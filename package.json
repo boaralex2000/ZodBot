@@ -1,0 +1,14 @@
+{
+  "name": "zodbot",
+  "version": "1.0.0",
+  "description": "discord bot for zodax crib.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dizzy10",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
