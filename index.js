@@ -59,17 +59,22 @@ bot.on("message", message => {
       .setTitle("COMMANDS:")
       .addField("!help:","List of commands.")
       .addField("!citatmaskinen:","Posts a random quote from Lucas.")
-      .addField("!memes:","Posts a random random meme.")
+      .addField("!memes:","Posts a random meme.")
       .addField("!mikke:","Posts a random picture of Michael.")
       .addField("!lillen:","Posts a random picture of Lucas.")
       .addField("!soggy:","Posts a random picture of Sebbe.")
       .addField("!mrbal:","Posts a random picture of Lunkan.")
       .addField("!zod:","Posts a random picture of Möller.")
-      .addField("!frasse:","Posts random a picture of Påden.")
-      .addField("!baok:","Posts random a picture of Jaok.")
-      .addField("!tompan:","Posts random a picture of Tomas.")
+      .addField("!frasse:","Posts a random picture of Påden.")
+      .addField("!baok:","Posts a random picture of Jaok.")
+      .addField("!tompan:","Posts a random picture of Tomas.")
 
     message.author.sendEmbed(embed);
+    message.delete(3000);
+    message.channel.send({embed: {
+      color: 0x1D82B6,
+      description: "**Check your DMs ${message.author}!**"
+    }}).then(d_msg => {d_msg.delete(3000);});
   }
 
   function citatmaskinen() {
