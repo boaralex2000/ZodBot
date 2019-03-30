@@ -57,8 +57,7 @@ bot.on("message", message => {
     const embed = new Discord.RichEmbed()
       .setColor(0x1D82B6)
       .addTitle("COMMANDS:")
-      .addField("1","!citatmaskinen : visar en random citat från lucas",true)
-      .addField("2","!memes : visar en random meme",true)
+      .addField("test","!citatmaskinen : visar en random citat från lucas",true)
 
     message.author.sendEmbed(embed);
   }
