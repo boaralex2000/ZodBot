@@ -73,7 +73,7 @@ bot.on("message", message => {
     message.delete(3000);
     message.channel.send({embed: {
       color: 0x1D82B6,
-      description: "**Check your DMs ${message.author}!**"
+      description: "**Check your DMs `${message.author}`!**"
     }}).then(d_msg => {d_msg.delete(3000);});
   }
 
