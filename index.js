@@ -69,12 +69,13 @@ bot.on("message", message => {
       .addField("!baok:","Posts a random picture of Jaok.")
       .addField("!tompan:","Posts a random picture of Tomas.")
 
+    const embed2 = new Discord.RichEmbed()
+      .setColor(0x1D82B6)
+      .setDescription(`**Check your DMs ${message.author}!**`)
+
     message.author.sendEmbed(embed);
-    message.delete(3000);
-    message.channel.send({embed: {
-      color: 0x1D82B6,
-      description: "**Check your DMs `${message.author}`!**"
-    }}).then(d_msg => {d_msg.delete(3000);});
+    message.delete(2000);
+    message.channel.send(embed2).then(d_msg => {d_msg.delete(3000);});
   }
 
   function citatmaskinen() {
