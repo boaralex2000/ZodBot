@@ -16,37 +16,37 @@ bot.on("message", message => {
   let args = messageArray.slice[1];
 
   switch(cmd) {
-  case "!help":
+  case ".help":
     help();
     break;
-  case "!citatmaskinen":
+  case ".citatmaskinen":
     citatmaskinen();
     break;
-  case "!memes":
+  case ".memes":
     memes();
     break;
-  case "!mikke":
+  case ".mikke":
     mikke();
     break;
-  case "!lillen":
+  case ".lillen":
     lillen();
     break;
-  case "!soggy":
+  case ".soggy":
     soggy();
     break;
-  case "!mrbal":
+  case ".mrbal":
     mrbal();
     break;
-  case "!zod":
+  case ".zod":
     zod();
     break;
-  case "!frasse":
+  case ".frasse":
     frasse();
     break;
-  case "!baok":
+  case ".baok":
     baok();
     break;
-  case "!tompan":
+  case ".tompan":
     tompan();
     break;
   default:
@@ -57,17 +57,17 @@ bot.on("message", message => {
     const embed = new Discord.RichEmbed()
       .setColor(0x1D82B6)
       .setTitle("COMMANDS:")
-      .addField("!help:","List of commands.")
-      .addField("!citatmaskinen:","Posts a random quote from Lucas.")
-      .addField("!memes:","Posts a random meme.")
-      .addField("!mikke:","Posts a random picture of Michael.")
-      .addField("!lillen:","Posts a random picture of Lucas.")
-      .addField("!soggy:","Posts a random picture of Sebbe.")
-      .addField("!mrbal:","Posts a random picture of Lunkan.")
-      .addField("!zod:","Posts a random picture of Möller.")
-      .addField("!frasse:","Posts a random picture of Påden.")
-      .addField("!baok:","Posts a random picture of Jaok.")
-      .addField("!tompan:","Posts a random picture of Tomas.")
+      .addField(".help:","List of commands.")
+      .addField(".citatmaskinen:","Posts a random quote from Lucas.")
+      .addField(".memes:","Posts a random meme.")
+      .addField(".mikke:","Posts a random picture of Michael.")
+      .addField(".lillen:","Posts a random picture of Lucas.")
+      .addField(".soggy:","Posts a random picture of Sebbe.")
+      .addField(".mrbal:","Posts a random picture of Lunkan.")
+      .addField(".zod:","Posts a random picture of Möller.")
+      .addField(".frasse:","Posts a random picture of Påden.")
+      .addField(".baok:","Posts a random picture of Jaok.")
+      .addField(".tompan:","Posts a random picture of Tomas.")
 
     const embed2 = new Discord.RichEmbed()
       .setColor(0x1D82B6)
