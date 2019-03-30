@@ -54,7 +54,11 @@ bot.on("message", message => {
 }
 
   function help() {
-    message.channel.send("help!");
+    const embed = new Discord.RichEmbed()
+      .setColor(0x1D82B6)
+      .addField("COMMANDS:","!citatmaskinen : visar en random citat från lucas",true)
+
+    message.author.sendEmbed(embed);
   }
 
   function citatmaskinen() {
