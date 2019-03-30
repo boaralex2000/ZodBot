@@ -74,7 +74,7 @@ bot.on("message", message => {
       .setDescription(`**Check your DMs ${message.author}!**`)
 
     message.author.sendEmbed(embed);
-    message.delete(2000);
+    message.delete();
     message.channel.send(embed2).then(d_msg => {d_msg.delete(3000);});
   }
 
