@@ -57,8 +57,17 @@ bot.on("message", message => {
     const embed = new Discord.RichEmbed()
       .setColor(0x1D82B6)
       .setTitle("COMMANDS:")
-      .addField("COMMANDS:","!citatmaskinen : visar en random citat från lucas.",true)
-      .addField("TEST:","!memes : visar en random meme.",true)
+      .addField("!help:","List of commands.")
+      .addField("!citatmaskinen:","Posts a random quote from Lucas.")
+      .addField("!memes:","Posts a random random meme.")
+      .addField("!mikke:","Posts a random picture of Michael.")
+      .addField("!lillen:","Posts a random picture of Lucas.")
+      .addField("!soggy:","Posts a random picture of Sebbe.")
+      .addField("!mrbal:","Posts a random picture of Lunkan.")
+      .addField("!zod:","Posts a random picture of Möller.")
+      .addField("!frasse:","Posts random a picture of Påden.")
+      .addField("!baok:","Posts random a picture of Jaok.")
+      .addField("!tompan:","Posts random a picture of Tomas.")
 
     message.author.sendEmbed(embed);
   }
