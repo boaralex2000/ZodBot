@@ -1,10 +1,9 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const { prefix, token} = require('./botconfig.json');
 
 bot.once("ready", () => {
   console.log("Ready!");
-  bot.user.setActivity("netflix with obama", {type: "WATCHING"});
+  bot.user.setActivity("netflix with Obama", {type: "WATCHING"});
 });
 
 bot.on("message", message => {
@@ -34,9 +33,6 @@ bot.on("message", message => {
   case ".soggy":
     soggy();
     break;
-  case ".mrbal":
-    mrbal();
-    break;
   case ".zod":
     zod();
     break;
@@ -63,7 +59,6 @@ bot.on("message", message => {
       .addField(".mikke:","Posts a random picture of Michael.")
       .addField(".lillen:","Posts a random picture of Lucas.")
       .addField(".soggy:","Posts a random picture of Sebbe.")
-      .addField(".mrbal:","Posts a random picture of Lunkan.")
       .addField(".zod:","Posts a random picture of Möller.")
       .addField(".frasse:","Posts a random picture of Påden.")
       .addField(".baok:","Posts a random picture of Jaok.")
@@ -126,12 +121,6 @@ bot.on("message", message => {
     message.channel.send( {files: ["./peoplePics/soggy/soggy (" + imageNumber + ").png"]});
   }
 
-  function mrbal() {
-    let number = 16;
-    let imageNumber = Math.floor (Math.random() * (number - 1 + 1)) +1;
-    message.channel.send( {files: ["./peoplePics/mrbal/mrbal (" + imageNumber + ").png"]});
-  }
-
   function zod() {
     let number = 8;
     let imageNumber = Math.floor (Math.random() * (number - 1 + 1)) +1;
@@ -165,4 +154,4 @@ bot.on("message", message => {
 
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(process.env.token);
